@@ -1,0 +1,144 @@
+/*add your css*/
+
+h1 {
+	font-size: 28px;
+	text-align: center;
+}
+
+h2 {
+	margin: 20px 0 5px;
+	font-size: 24px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.wrap {
+	margin: 40px auto;
+	max-width: 700px;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.list-container {
+	width: 50%;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: calc(50% - 20px);
+	margin: 0 10px;
+}
+
+.name-select {
+	font-size: 11px;
+	position: relative;
+	padding-right: 20px;
+}
+
+.name-select::before {
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-top: 5px solid #000;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid transparent;
+	top: 5px;
+	right: 5px;
+}
+
+.name-select--up::before {
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-top: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #000;
+	border-left: 5px solid transparent;
+	top: 0;
+	right: 5px;
+}
+
+.close {
+	width: 30px;
+	height: 30px;
+	background: #000;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.user-list-item {
+	margin: 10px 0;
+	list-style: none;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	animation: fade .3s;
+}
+
+@media screen and (max-width: 600px) {
+	.user-list-item {
+		flex-flow: column wrap;
+	}
+}
+
+@keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.user-list-item__img {
+	border-radius: 10px 0 0 10px;
+}
+
+.user-list-item__name {
+	flex-grow: 1;
+	padding: 20px 10px;
+	text-transform: capitalize;
+}
+
+.btn {
+	width: 49%;
+	border-radius: 4px;
+	padding: 10px;
+	color: #fff;
+	background-color: #1dcaff;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #00aced;
+}
+
+.loader {
+	border: 16px solid #f1f1f1; /* Light grey */
+	border-top: 16px solid #1dcaff; /* Blue */
+	border-radius: 50%;
+	width: 96px;
+	height: 96px;
+	animation: spin 1s linear infinite;
+	margin: 0 auto;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
