@@ -38,6 +38,7 @@ ul {
 	font-size: 11px;
 	position: relative;
 	padding-right: 20px;
+	cursor: pointer;
 }
 
 .name-select::before {
